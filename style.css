@@ -1,0 +1,69 @@
+/*Base Styles*/
+body { 
+	background: #fff; 
+	color: #000; 
+	font-family:  'Open Sans', Arial, sans-serif;
+	margin:  0;
+	height:  100vh;
+		
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap:  0.5%;
+	text-align:  center;
+	position:  absolute;
+	top:  45%;
+	width:  100%;
+	
+}
+	
+.circle {
+	width: 50%;
+	height: auto;
+	padding-top:  50%;
+	border-radius: 50%;
+	border:  none;
+	cursor:  pointer;
+	transition:  opacity 1s;
+}
+.circle-label {
+	font-size: .875em;
+}
+.circle[data-color=red] {
+	background: red;
+}
+
+.circle[data-color=green]{
+	background: green;
+}
+
+.circle[data-color=blue] {
+	background: blue;
+}
+
+.circle[data-color=orange] {
+	background: orange;
+}
+
+.circle[data-color=yellow]{
+	background: yellow;
+}
+
+/*Styles used in conjunction with JS*/
+.mt-40 {
+	margin-top:  40%;
+}
+	
+.square {
+	border-radius:  0 !important;
+}
+
+.is-hidden {
+	visibility:  hidden;
+}
+
+.opacity-50 {
+	opacity:  .5;	
+}

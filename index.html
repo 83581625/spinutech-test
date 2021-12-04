@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Lisa Williams - 12/6/21</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Load font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<!-- Load stylesheets - according to Mozilla, loading stylesheets based on media queries (as opposed to placing all media queries in 1 stylesheet) is better for performance: https://developer.mozilla.org/en-US/docs/Learn/Performance/CSS -->
+		<link href="style.css" rel="stylesheet">
+		<link href="desktop.css" rel="stylesheet" media="screen and (min-width:600px)"> <!-- For the purpose of this exercise, I am defining "mobile" as screen width less than 600px -->
+	</head>
+	<body>
+		<main> <!-- use HTML5 semantic elements -->
+			<section class="grid">
+				<div class="row-1" data-color="red">
+					<button class="circle" data-color="red" aria-labelledby="red-label"></button> <!-- For better accessibility, code elements as buttons. Added ARIA attribute, but honestly, not sure that it really helps in this case since the label is hidden until the user hovers over the button. So most likely, the screen reader won't pick up the element that the ARIA attribute refers to. The design of this project would have to be completely different to really make it accessible. -->
+					<div class="circle-label is-hidden" data-label="red-label" id="red-label">
+						<p>Red</p>
+					</div>
+					<div class="row-2" data-color="red"></div> <!-- Used for when the circle moves to the second row -->
+				</div>
+				<div class="row-1" data-color="green">
+					<button class="circle" data-color="green" aria-labelledby="green-label"></button>
+					<div class="circle-label is-hidden" data-label="green-label" id="green-label">
+						<p>Green</p>
+					</div>
+					<div class="row-2" data-color="green"></div>
+				</div>
+				<div class="row-1" data-color="blue">
+					<button class="circle" data-color="blue" aria-labelledby="blue-label"></button>
+						<div class="circle-label is-hidden" data-label="blue-label" id="blue-label">
+							<p>Blue</p>
+						</div>
+						<div class="row-2" data-color="blue"></div>
+				</div>
+				<div class="row-1" data-color="orange">
+					<button class="circle" data-color="orange" aria-labelledby="orange-label"></button>
+					<div class="circle-label is-hidden" data-label="orange-label" id="orange-label">
+						<p>Orange</p>
+					</div>
+					<div class="row-2" data-color="orange"></div>
+				</div>
+				<div class="row-1" data-color="yellow">
+					<button class="circle" data-color="yellow" aria-labelledby="yellow-label"></button>
+					<div class="circle-label is-hidden" data-label="yellow-label" id="yellow-label">
+						<p>Yellow</p>
+					</div>
+					<div class="row-2" data-color="yellow"></div>
+					</div>
+			</section>
+			
+		</main>
+		<script src="scripts.js" async></script>
+	</body>
+</html>
